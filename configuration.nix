@@ -44,10 +44,8 @@
   environment.systemPackages = with pkgs; [
      vim
      awesome
-     chromium
      git
      fish
-     unstable.alacritty
   ];
 
 

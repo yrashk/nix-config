@@ -46,7 +46,14 @@
      unstable.awesome
      git
      fish
+     slock
   ];
+
+  security.wrappers = {
+    slock = {
+      source = "${pkgs.slock}/bin/slock";
+    };
+  };
 
 
   programs.fish.enable = true;

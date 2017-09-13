@@ -44,7 +44,6 @@
   environment.systemPackages = with pkgs; [
      vim
      awesome
-     konsole
      chromium
      git
      fish

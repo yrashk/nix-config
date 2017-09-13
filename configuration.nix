@@ -71,8 +71,8 @@
   hardware.opengl.driSupport32Bit = true;
   services.xserver.synaptics.enable = true;
   services.xserver.synaptics.twoFingerScroll = true;
-  services.xserver.layout = "us";
-  # services.xserver.xkbOptions = "eurosign:e";
+  services.xserver.layout = "us,ua,th";
+  services.xserver.xkbOptions = "grp:caps_toggle,grp_led:caps";
 
   # Enable the KDE Desktop Environment.
   services.xserver.displayManager.sddm = {

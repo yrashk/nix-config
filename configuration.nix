@@ -19,6 +19,7 @@
 
   nixpkgs.config = {
      allowUnfree = true;
+     virtualbox.enableExtensionPack = true;
      packageOverrides = pkgs: {
         unstable = import <nixos-unstable> {
            config = { 

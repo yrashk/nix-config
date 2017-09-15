@@ -22,14 +22,6 @@
   nixpkgs.config = {
      allowUnfree = true;
      virtualbox.enableExtensionPack = true;
-     packageOverrides = pkgs: {
-        unstable = import <nixos-unstable> {
-           config = { 
-                allowUnfree = true;
-                allowBroken = true;
-           };
-        };
-     };
   };
 
   # Select internationalisation properties.
@@ -46,7 +38,7 @@
   # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [
      vim
-     unstable.awesome
+     awesome
      git
      fish
      slock

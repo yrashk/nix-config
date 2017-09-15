@@ -90,6 +90,8 @@
   };
   services.xserver.windowManager.awesome.enable = true;
 
+  fonts.fonts = [ pkgs.iosevka ];
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.extraUsers.yrashk = {
      isNormalUser = true;

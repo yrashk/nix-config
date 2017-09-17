@@ -74,7 +74,7 @@
   services.xserver.synaptics.enable = true;
   services.xserver.synaptics.twoFingerScroll = true;
   services.xserver.layout = "us,ua,th";
-  services.xserver.xkbOptions = "grp:caps_toggle,grp_led:caps";
+  services.xserver.xkbOptions = "grp:alt_space_toggle";
 
   # Enable the KDE Desktop Environment.
   services.xserver.displayManager.lightdm = {

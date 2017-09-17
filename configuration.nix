@@ -22,6 +22,9 @@
   nixpkgs.config = {
      allowUnfree = true;
      virtualbox.enableExtensionPack = true;
+     packageOverrides = pkgs: rec {
+       awesome = pkgs.awesome.overrideAttrs (attrs: { cmakeFlags = "-DOVERRIDE_VERSION=${attrs.version}"; });
+     };
   };
 
   # Select internationalisation properties.

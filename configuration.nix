@@ -49,7 +49,7 @@ let unstable = import (fetchTarball https://nixos.org/channels/nixos-unstable/ni
      vim
      awesome
      git
-     fish
+     unstable.fish
      slock
   ];
 
@@ -60,7 +60,7 @@ let unstable = import (fetchTarball https://nixos.org/channels/nixos-unstable/ni
   };
 
 
-  programs.fish.enable = true;
+  # programs.fish.enable = true;
 
   # List services that you want to enable:
 

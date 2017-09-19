@@ -4,6 +4,12 @@
 
 { config, pkgs, ... }:
 
+let unstable = import (fetchTarball https://nixos.org/channels/nixos-unstable/nixexprs.tar.xz) {
+          config = {
+              allowUnfree = true;
+          };
+      };
+  in 
 {
   imports =
     [ # Include the results of the hardware scan.
@@ -23,7 +29,7 @@
      allowUnfree = true;
      virtualbox.enableExtensionPack = true;
      packageOverrides = pkgs: rec {
-       awesome = pkgs.awesome.overrideAttrs (attrs: { cmakeFlags = "-DOVERRIDE_VERSION=${attrs.version}"; });
+      awesome = unstable.awesome.overrideAttrs (attrs: { cmakeFlags = "-DOVERRIDE_VERSION=${attrs.version}"; });
      };
   };
 

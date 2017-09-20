@@ -79,6 +79,7 @@ let unstable = import (fetchTarball https://nixos.org/channels/nixos-unstable/ni
   # Enable the X11 windowing system.
   services.xserver.enable = true;
   services.xserver.videoDrivers = ["intel"];
+  hardware.bumblebee.enable = true;
   hardware.opengl.driSupport32Bit = true;
   services.xserver.synaptics.enable = true;
   services.xserver.synaptics.twoFingerScroll = true;

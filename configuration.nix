@@ -115,4 +115,7 @@ let unstable = import (fetchTarball https://nixos.org/channels/nixos-unstable/ni
   virtualisation.docker.enable = true;
 
   hardware.bluetooth.enable = true;
+
+  system.autoUpgrade.enable = true;
+
 }

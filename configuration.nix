@@ -28,9 +28,6 @@ let unstable = import (fetchTarball https://nixos.org/channels/nixos-unstable/ni
   nixpkgs.config = {
      allowUnfree = true;
      virtualbox.enableExtensionPack = true;
-     packageOverrides = pkgs: rec {
-      awesome = unstable.awesome.overrideAttrs (attrs: { cmakeFlags = "-DOVERRIDE_VERSION=${attrs.version}"; });
-     };
   };
 
   # Select internationalisation properties.
@@ -49,7 +46,7 @@ let unstable = import (fetchTarball https://nixos.org/channels/nixos-unstable/ni
      vim
      awesome
      git
-     unstable.fish
+     fish
      slock
   ];
 

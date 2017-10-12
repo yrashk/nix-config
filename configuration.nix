@@ -115,4 +115,7 @@ let unstable = import (fetchTarball https://nixos.org/channels/nixos-unstable/ni
 
   system.autoUpgrade.enable = true;
 
+  environment.etc = {
+    "wpa_supplicant.conf".text = builtins.readFile private/wpa_supplicant.conf;
+  };
 }

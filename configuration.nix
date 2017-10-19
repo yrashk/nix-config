@@ -115,6 +115,10 @@ let unstable = import (fetchTarball https://nixos.org/channels/nixos-unstable/ni
 
   system.autoUpgrade.enable = true;
 
+  services.logind.extraConfig = ''
+  HandlePowerKey=lock
+  '';
+
   environment.etc = {
     "wpa_supplicant.conf".text = builtins.readFile private/wpa_supplicant.conf;
   };

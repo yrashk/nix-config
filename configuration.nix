@@ -46,7 +46,6 @@ let unstable = import (fetchTarball https://nixos.org/channels/nixos-unstable/ni
      vim
      awesome
      git
-     fish
      slock
   ];
 
@@ -57,7 +56,7 @@ let unstable = import (fetchTarball https://nixos.org/channels/nixos-unstable/ni
   };
 
 
-  # programs.fish.enable = true;
+  programs.fish.enable = true;
 
   # List services that you want to enable:
 
@@ -102,7 +101,7 @@ let unstable = import (fetchTarball https://nixos.org/channels/nixos-unstable/ni
      extraGroups = ["wheel" "vboxusers" "docker"];
      uid = 1000;
      hashedPassword = "$6$YZ2znbV6G4$dbKGu7E/ywwHVmZy9Ez3nenesHncLyKqQKYwdWo9QTLerhDH3NCxleuT8fl5vDCGEzDQrLwpd/VMmDgy90D3q1"; 
-     shell = "/run/current-system/sw/bin/fish";
+     shell = pkgs.fish;
    };
 
   # The NixOS release to be compatible with for stateful data such as databases.

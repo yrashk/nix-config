@@ -28,6 +28,9 @@ let unstable = import (fetchTarball https://nixos.org/channels/nixos-unstable/ni
   nixpkgs.config = {
      allowUnfree = true;
      virtualbox.enableExtensionPack = true;
+     packageOverrides = pkgs: with pkgs; rec {
+        fish-foreign-env = unstable.fish-foreign-env;
+    };
   };
 
   # Select internationalisation properties.

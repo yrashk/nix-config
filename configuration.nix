@@ -95,17 +95,7 @@ let unstable = import (fetchTarball https://nixos.org/channels/nixos-unstable/ni
   services.xserver.windowManager.awesome.enable = true;
 
   fonts.fonts = [ pkgs.iosevka ];
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.extraUsers.yrashk = {
-     isNormalUser = true;
-     description = "Yurii Rashkovskii";
-     home = "/home/yrashk";
-     extraGroups = ["wheel" "vboxusers" "docker"];
-     uid = 1000;
-     hashedPassword = "$6$YZ2znbV6G4$dbKGu7E/ywwHVmZy9Ez3nenesHncLyKqQKYwdWo9QTLerhDH3NCxleuT8fl5vDCGEzDQrLwpd/VMmDgy90D3q1"; 
-     shell = pkgs.fish;
-   };
+  users.extraUsers.yrashk = import ./users/yrashk.nix { inherit config; inherit pkgs; };
 
   # The NixOS release to be compatible with for stateful data such as databases.
   system.stateVersion = "17.09";

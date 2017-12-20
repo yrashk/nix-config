@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+NAME=${1:-`cat /var/run/pia`}
+/usr/bin/env systemctl stop openvpn-$NAME.service

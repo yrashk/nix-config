@@ -14,6 +14,7 @@ let unstable = import (fetchTarball https://nixos.org/channels/nixos-unstable/ni
   imports =
     [ # Include the results of the hardware scan.
       /etc/nixos/hardware-configuration.nix
+      ./pia.nix
     ];
 
   nix.maxJobs = 4;

@@ -2,3 +2,4 @@
 /keyrings/live/pubring.kbx~
 /keyrings/live/secring.gpg
 /private/wpa_supplicant.conf
+/pia/user-pass

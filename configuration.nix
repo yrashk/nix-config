@@ -42,7 +42,7 @@ let unstable = import (fetchTarball https://nixos.org/channels/nixos-unstable/ni
   # };
 
   # Set your time zone.
-  time.timeZone = "Asia/Bangkok";
+  time.timeZone = "America/Vancouver";
 
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget

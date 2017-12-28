@@ -41,9 +41,6 @@ let unstable = import (fetchTarball https://nixos.org/channels/nixos-unstable/ni
   #   defaultLocale = "en_US.UTF-8";
   # };
 
-  # Set your time zone.
-  time.timeZone = "America/Vancouver";
-
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [

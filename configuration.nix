@@ -112,4 +112,8 @@ let unstable = import (fetchTarball https://nixos.org/channels/nixos-unstable/ni
   environment.etc = {
     "wpa_supplicant.conf".text = builtins.readFile private/wpa_supplicant.conf;
   };
+
+  # This is to enable OnlyKey configuration as per https://www.pjrc.com/teensy/49-teensy.rules
+  services.udev.extraRules = builtins.readFile ./teensy.rules;
+
 }

@@ -116,4 +116,8 @@ let unstable = import (fetchTarball https://nixos.org/channels/nixos-unstable/ni
   # This is to enable OnlyKey configuration as per https://www.pjrc.com/teensy/49-teensy.rules
   services.udev.extraRules = builtins.readFile ./teensy.rules;
 
+  # JACK support for realtime audio recording
+  boot.kernelModules = [ "snd-seq" "snd-rawmidi" ];
+  hardware.pulseaudio.package = pkgs.pulseaudio.override { jackaudioSupport = true; };
+
 }

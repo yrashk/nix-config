@@ -92,7 +92,7 @@ let unstable = import (fetchTarball https://nixos.org/channels/nixos-unstable/ni
   };
   services.xserver.windowManager.awesome.enable = true;
 
-  fonts.fonts = [ pkgs.iosevka ];
+  fonts.fonts = [ pkgs.iosevka-bin ];
   users.extraUsers.yrashk = import ./users/yrashk.nix { inherit config; inherit pkgs; };
 
   # The NixOS release to be compatible with for stateful data such as databases.

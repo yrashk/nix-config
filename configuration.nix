@@ -96,7 +96,7 @@ let unstable = import (fetchTarball https://nixos.org/channels/nixos-unstable/ni
   users.extraUsers.yrashk = import ./users/yrashk.nix { inherit config; inherit pkgs; };
 
   # The NixOS release to be compatible with for stateful data such as databases.
-  system.stateVersion = "17.09";
+  system.stateVersion = "18.03";
 
   virtualisation.virtualbox.host.enable = true;
   virtualisation.docker.enable = true;

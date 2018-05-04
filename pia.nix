@@ -69,7 +69,7 @@ in
       ca-toronto = server "ca-toronto";
       ca-vancouver = server "ca-vancouver";
       hk = server "hk";
-      jp = server "japan";
+      japan = server "japan";
       sg = server "sg";
       us-texas = server "us-texas";
     };

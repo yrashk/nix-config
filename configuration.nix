@@ -69,6 +69,9 @@ let unstable = import (fetchTarball https://nixos.org/channels/nixos-unstable/ni
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
+  networking.nat.internalInterfaces = [ "enp0s20f0u1" "enp0s20f0u2" "enp0s20f0u3" "enp0s20f0u4" ];
+  networking.nat.externalInterface = "wlp2s0"; 
+  networking.nat.enable = true;
 
   # Enable CUPS to print documents.
   # services.printing.enable = true;

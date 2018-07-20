@@ -120,7 +120,10 @@ let unstable = import (fetchTarball https://nixos.org/channels/nixos-unstable/ni
   services.udev.extraRules = builtins.readFile ./teensy.rules;
 
   # JACK support for realtime audio recording
-  boot.kernelModules = [ "snd-seq" "snd-rawmidi" ];
-  hardware.pulseaudio.package = pkgs.pulseaudio.override { jackaudioSupport = true; };
+  boot.kernelModules = [ "snd-seq" "snd-rawmidi" "snd-aloop"];
+  hardware.pulseaudio = {
+     enable = true;
+     package = pkgs.pulseaudioFull;
+  };
 
 }
